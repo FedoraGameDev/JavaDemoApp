@@ -5,14 +5,11 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Paragraph;
-import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.UnicastProcessor;
 
@@ -20,6 +17,7 @@ import reactor.core.publisher.UnicastProcessor;
 @Push
 @StyleSheet("styles/styles.css")
 public class MainView extends VerticalLayout {
+    private static final long serialVersionUID = 1L;
     String username;
     UnicastProcessor<ChatMessage> publisher;
     Flux<ChatMessage> messages;

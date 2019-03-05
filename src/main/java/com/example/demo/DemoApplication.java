@@ -3,13 +3,12 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.UnicastProcessor;
 
 @SpringBootApplication
-public class DemoApplication {
-
+public class DemoApplication
+{
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
@@ -25,5 +24,4 @@ public class DemoApplication {
 	{
 		return publisher.replay(30).autoConnect();
 	}
-
 }

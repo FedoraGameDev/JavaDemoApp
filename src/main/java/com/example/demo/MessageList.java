@@ -5,6 +5,8 @@ import com.vaadin.flow.component.html.Div;
 
 public class MessageList extends Div
 {
+    private static final long serialVersionUID = 1L;
+
     public MessageList()
     {
         addClassName("message-list");
